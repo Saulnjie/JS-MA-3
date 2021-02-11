@@ -1,0 +1,79 @@
+.main {
+  width: 85%;
+  display: flex;
+  margin: 100px auto;
+  flex-wrap: wrap;
+}
+
+.redBorder {
+  border: 2px red solid;
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: auto;
+  background-color: lightblue;
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+}
+
+.redBorder:hover {
+  background-color: lightpink;
+  cursor: pointer;
+  transition: 0.2;
+}
+
+.alert {
+  width: 100%;
+}
+
+.danger {
+  background-color: rgb(255 124 124);
+  color: red;
+  border: solid 1px red;
+  padding: 20px;
+  transition: 2s;
+}
+
+.success {
+  background-color: rgb(148, 247, 139);
+  color: darkgreen;
+  border: solid 1px darkgreen;
+  padding: 20px;
+  transition: 2s;
+}
+
+.warning {
+  background-color: rgb(255, 200, 80);
+  color: orange;
+  border: solid 1px orange;
+  padding: 20px;
+  transition: 2s;
+}
+
+.information {
+  background-color: rgb(108, 238, 255);
+  color: blue;
+  border: solid 1px blue;
+  padding: 20px;
+  transition: 2s;
+}
+
+.card {
+  background-color: lightgreen;
+  border: black 2px solid;
+  margin: 10px;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.hide {
+  display: none;
+}
