@@ -12,15 +12,16 @@ async function getCars() {
     console.log(final)
     console.log(final.length)
     
-    final.forEach((value) => {
+    // final.forEach((value) => {
+      for (let i = 0; i < 8; i++) {
       document.querySelector('main').innerHTML += `
       <div class="card">
-      <p>${value.name}</p>
-      <p>Rating: ${value.rating}</p>
-      <p>Number of tags: ${value.tags.length}</p>
+      <p>${[i].name}</p>
+      <p>Rating: ${[i].rating}</p>
+      <p>Number of tags: ${[i].tags}</p>
       </div>
       `;
-    });
+    };
   }
   catch (error) {
     console.log(error);
