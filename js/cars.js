@@ -6,19 +6,20 @@ async function getCars() {
   
   try {
     const repsonse = await fetch('https://api.rawg.io/api/games?dates=2019-01-01,2019-12-31&ordering=-rating');
-    const jsonResult = await repsonse.json();
+    const jsonResult = await repsonse.json()
     console.log(jsonResult);
     const final = jsonResult.results
     console.log(final)
     console.log(final.length)
     
-    // final.forEach((value) => {
+
       for (let i = 0; i < 8; i++) {
+      const car = final[i];
       document.querySelector('main').innerHTML += `
       <div class="card">
-      <p>${[i].name}</p>
-      <p>Rating: ${[i].rating}</p>
-      <p>Number of tags: ${[i].tags}</p>
+      <p>${car.name}</p>
+      <p>Rating: ${car.rating}</p>
+      <p>Number of tags: ${car.tags.length}</p>
       </div>
       `;
     };
@@ -36,3 +37,13 @@ finally {
 }
 
 getCars();
+
+
+
+// Object destructuring
+
+/**
+  const { results: cars } = jsonResult; <-- Variable aliasing
+  const { results } = jsonResult; <-- Regular destructuring
+  const results = jsonResult.results; <-- Regular dot-sourcing
+ */
